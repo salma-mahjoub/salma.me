@@ -33,6 +33,24 @@ const projects = [
       "Web and desktop platform for sustainable agriculture workflows, including crop management, recruitment, and climate tracking. Selected among the best projects at ESPRIT's Bal des Projets.",
   },
   {
+    name: "Recruitment Innovation Platform",
+    meta: "HTML, CSS, JavaScript, PHP",
+    summary:
+      "Web platform designed to improve candidate-company matching with personalized recommendations, community advice spaces, online certification programs, job presentation videos, and virtual company tours.",
+  },
+  {
+    name: "Delivery Operations Desktop App",
+    meta: "C++, Qt, Arduino",
+    summary:
+      "Desktop application for simplifying online delivery management, combining order and stock workflows with an embedded detector for battery charge status and maximum courier route alerts.",
+  },
+  {
+    name: "Quantum Escape",
+    meta: "C, SDL",
+    summary:
+      "Video game set in NovaCore, a futuristic metaverse city where Orion Vega travels from 2030 to 2060 to reverse Neuroflux's robot-controlled future and bring disappeared citizens home.",
+  },
+  {
     name: "Multilingual AI Chatbot",
     meta: "NLP, hackathon delivery",
     summary:
@@ -50,19 +68,19 @@ const skillGroups = [
 ];
 
 const visualNotes = [
-  "Mediterranean blue",
-  "Cafe rituals",
-  "Travel light",
-  "Architecture details",
-  "Fashion texture",
+  "Color systems",
+  "Editorial references",
+  "Interface tone",
+  "Material texture",
+  "Place details",
 ];
 
 const palette = [
-  { name: "Rose", value: "#d85b8c" },
-  { name: "Ceramic blue", value: "#2f69a8" },
-  { name: "Olive", value: "#78834b" },
-  { name: "Terracotta", value: "#b36b53" },
-  { name: "Cream", value: "#f7eadc" },
+  { name: "Soft rose", value: "#e8b7c9" },
+  { name: "Ink", value: "#18181b" },
+  { name: "Ceramic blue", value: "#315f8f" },
+  { name: "Olive", value: "#6f7a48" },
+  { name: "Warm paper", value: "#f6efe8" },
 ];
 
 const links = [
@@ -131,14 +149,13 @@ const jsonLd = {
     "Kotlin Jetpack Compose",
     "NestJS",
     "Symfony",
-    "ABAP",
   ],
   sameAs: [siteConfig.github, siteConfig.linkedin, siteConfig.pinterest],
 };
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[linear-gradient(135deg,#ffc2dc_0%,#ffe1ef_24%,#fff7fb_48%,#ffffff_68%,#ffe8f3_100%)] text-foreground">
+    <main className="min-h-screen bg-[linear-gradient(135deg,#fff8fb_0%,#ffffff_34%,#ffffff_67%,#fff4f8_100%)] text-foreground">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -219,7 +236,7 @@ export default function Home() {
               Computer science engineering student at ESPRIT, specializing in
               mobile information systems. I work across SwiftUI, Kotlin Jetpack
               Compose, Flutter, React Native, NestJS, Symfony, Next.js, machine
-              learning, NLP, computer vision, and SAP ABAP.
+              learning, NLP, and computer vision.
             </p>
             <div className="mt-10 flex flex-wrap gap-2">
               <Button asChild>
@@ -272,7 +289,7 @@ export default function Home() {
           <div className="mb-8 flex items-end justify-between gap-6">
             <h2 className="text-xl font-semibold">Selected work</h2>
             <p className="hidden text-sm text-muted-foreground sm:block">
-              Mobile, AI, cloud, and product systems.
+              Mobile, AI, web, desktop, and embedded systems.
             </p>
           </div>
 
@@ -325,12 +342,11 @@ export default function Home() {
         <section id="moodboard" className="border-t py-14">
           <div className="mb-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div>
-              <h2 className="text-xl font-semibold">Visual notebook</h2>
+              <h2 className="text-xl font-semibold">Visual direction</h2>
               <p className="mt-4 max-w-xl text-sm leading-7 text-muted-foreground">
-                A curated Pinterest reference board for color, texture, place,
-                and everyday details. It keeps the portfolio more personal
-                while still connecting back to product taste, interface mood,
-                and visual decision-making.
+                A curated Pinterest board used as a visual research layer for
+                color restraint, interface atmosphere, editorial rhythm, and
+                details that make digital products feel considered.
               </p>
             </div>
             <div className="flex flex-wrap gap-2 lg:justify-end">
@@ -355,7 +371,7 @@ export default function Home() {
             >
               <Image
                 className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.015]"
-                src="/pinterest-moodboard.jpg"
+                src="/pinterest-moodboard-v2.jpg"
                 alt="Pinterest moodboard with travel, cafes, architecture, food, and fashion inspiration"
                 width={1800}
                 height={905}
@@ -363,11 +379,9 @@ export default function Home() {
               />
             </a>
 
-            <div className="flex flex-col justify-between gap-8 border bg-white/45 p-6 backdrop-blur">
+            <div className="flex flex-col justify-between gap-8 border bg-white/55 p-6 backdrop-blur">
               <div>
-                <p className="text-xs uppercase text-muted-foreground">
-                  Palette direction
-                </p>
+                <p className="text-xs uppercase text-muted-foreground">Design cues</p>
                 <div className="mt-5 grid gap-3">
                   {palette.map((color) => (
                     <div className="flex items-center gap-3" key={color.name}>
@@ -386,9 +400,10 @@ export default function Home() {
 
               <div>
                 <p className="text-sm leading-7 text-muted-foreground">
-                  The mood is warm, feminine, Mediterranean, and detail-driven:
-                  soft pinks, ceramic blues, garden greens, cafe textures, and
-                  travel photography.
+                  The board balances warm personal references with a cleaner
+                  product lens: soft contrast, precise color accents, tactile
+                  materials, and travel details translated into interface
+                  hierarchy.
                 </p>
                 <Button asChild className="mt-6" variant="outline">
                   <a

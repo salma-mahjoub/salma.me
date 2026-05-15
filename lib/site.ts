@@ -8,7 +8,7 @@ export const siteConfig = {
   phone: "+216 25 305 902",
   phoneHref: "tel:+21625305902",
   github: "https://github.com/salma-mahjoub",
-  linkedin: "https://linkedin.com/in/salma-mahjoub",
+  linkedin: "https://www.linkedin.com/in/salma-mahjoub-706b87246/",
   pinterest: "https://www.pinterest.com/Salma_mahjoub_/",
   keywords: [
     "Salma Mahjoub",
