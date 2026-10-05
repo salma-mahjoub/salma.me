@@ -71,10 +71,7 @@ export const projects: Project[] = [
     summaryFr:
       "Plateforme Android sécurisée de synchronisation de télémétrie M2M, associant une application mobile autonome et une API centrale. Elle automatise l'identification des appareils, l'authentification OAuth 2.0 et les échanges de données en arrière-plan.",
     tags: ["Kotlin", "Jetpack Compose", "WorkManager", "Symfony", "Redis", "OAuth 2.0", "JWT", "Docker"],
-    links: [
-      { label: "Mobile", href: gh("walkandwin-mobile"), kind: "repo" },
-      { label: "API", href: gh("walkandwin-api"), kind: "repo" },
-    ],
+    privateRepo: true,
     motif: "secure-sync",
   },
   {
