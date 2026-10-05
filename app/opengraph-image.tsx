@@ -70,7 +70,7 @@ export default function OpenGraphImage() {
               maxWidth: 900,
             }}
           >
-            Mobile, AI, and digital product engineering student based in Tunis.
+            Creative mobile and full-stack developer. Open to a PFE internship from January 2027.
           </div>
         </div>
       </div>
