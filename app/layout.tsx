@@ -92,7 +92,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("theme")||"system";var d=t==="dark"||(t==="system"&&matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.toggle("dark",d);document.documentElement.style.colorScheme=d?"dark":"light"}catch(e){}try{var h=document.documentElement;var l=localStorage.getItem("lang");if(l!=="fr"&&l!=="en"){l=(navigator.language||"en").toLowerCase().indexOf("fr")===0?"fr":"en"}h.dataset.lang=l;h.lang=l;if(l==="fr"){document.title="Salma Mahjoub | Développeuse Mobile & Full-Stack créative"}}catch(e){}try{var h=document.documentElement;if(sessionStorage.getItem("intro")||matchMedia("(prefers-reduced-motion: reduce)").matches){h.classList.add("intro-seen")}else{h.classList.add("intro-lock")}}catch(e){document.documentElement.classList.add("intro-seen")}})()`,
+            __html: `(function(){try{var t=localStorage.getItem("theme")||"system";var d=t==="dark"||(t==="system"&&matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.toggle("dark",d);document.documentElement.style.colorScheme=d?"dark":"light"}catch(e){}try{var h=document.documentElement;var l=localStorage.getItem("lang");if(l!=="fr"&&l!=="en"){l="en"}h.dataset.lang=l;h.lang=l;if(l==="fr"){document.title="Salma Mahjoub | Développeuse Mobile & Full-Stack créative"}}catch(e){}try{var h=document.documentElement;if(sessionStorage.getItem("intro")||matchMedia("(prefers-reduced-motion: reduce)").matches){h.classList.add("intro-seen")}else{h.classList.add("intro-lock")}}catch(e){document.documentElement.classList.add("intro-seen")}})()`,
           }}
         />
       </head>
