@@ -1,12 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Manrope, Newsreader, Playfair_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { Intro } from "@/components/intro";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site";
 
 const manrope = Manrope({
   variable: "--font-manrope",
+  subsets: ["latin"],
+});
+
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
   subsets: ["latin"],
 });
 
@@ -31,12 +37,6 @@ export const metadata: Metadata = {
   keywords: [...siteConfig.keywords],
   alternates: {
     canonical: "/",
-  },
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
   },
   manifest: "/manifest.webmanifest",
   openGraph: {
@@ -67,8 +67,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#18181b",
-  colorScheme: "light",
+  themeColor: "#0d1117",
+  colorScheme: "light dark",
 };
 
 export default function RootLayout({
@@ -79,15 +79,25 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={cn(
         "h-full",
         "antialiased",
         "font-sans",
         manrope.variable,
         playfairDisplay.variable,
+        newsreader.variable,
       )}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("theme")||"system";var d=t==="dark"||(t==="system"&&matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.toggle("dark",d);document.documentElement.style.colorScheme=d?"dark":"light"}catch(e){}try{var h=document.documentElement;var l=localStorage.getItem("lang");if(l!=="fr"&&l!=="en"){l=(navigator.language||"en").toLowerCase().indexOf("fr")===0?"fr":"en"}h.dataset.lang=l;h.lang=l;if(l==="fr"){document.title="Salma Mahjoub | Développeuse Mobile & Full-Stack créative"}}catch(e){}try{var h=document.documentElement;if(sessionStorage.getItem("intro")||matchMedia("(prefers-reduced-motion: reduce)").matches){h.classList.add("intro-seen")}else{h.classList.add("intro-lock")}}catch(e){document.documentElement.classList.add("intro-seen")}})()`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
+        <Intro />
         {children}
         <Analytics />
       </body>

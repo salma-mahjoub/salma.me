@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Salma Mahjoub",
-  title: "Salma Mahjoub | Mobile Information Systems Engineer",
+  title: "Salma Mahjoub | Creative Mobile & Full-Stack Developer",
   description:
-    "Software engineering portfolio for Salma Mahjoub, a Tunis-based computer science engineering student building mobile, AI, and digital product experiences.",
+    "Portfolio of Salma Mahjoub, a creative mobile and full-stack developer building polished apps, web platforms and AI-powered products. Open to a PFE internship from January 2027.",
   url: "https://salma.me",
   email: "mahjoub2003@gmail.com",
   phone: "+216 25 305 902",
