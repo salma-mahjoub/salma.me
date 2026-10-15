@@ -327,7 +327,6 @@ img.skill-logo { transition: transform 0.35s cubic-bezier(0.3, 1.5, 0.5, 1); }
 .cert-verify-text { background: linear-gradient(var(--primary), var(--primary)) no-repeat 0 100% / 0% 1.5px; padding-bottom: 2px; transition: background-size 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); }
 .cert-verify:hover .cert-verify-text { background-size: 100% 1.5px; }
 .cert-arrow { transition: transform 0.25s ease; }
-.cert-progress { transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); }
 .cert-verify:hover .cert-arrow { transform: translate(2px, -2px); }
 
 /* Beyond the code: paint-chip fan and kanun */
@@ -522,8 +521,7 @@ html[data-lang="fr"] [data-lng="en"], html:not([data-lang="fr"]) [data-lng="fr"]
   .pin-card, .pin-logo, .pin-panel, .music-panel, .pin-arrow, .pin-link-text { transition: none; }
   .pin-photo { transition: none; }
   .cert-badge { animation: none; transition: none; }
-  .cert-card, .cert-glow, .cert-arrow, .cert-progress { transition: none; }
-  .term-cmd { width: auto; animation: none !important; }
+  .cert-card, .cert-glow, .cert-arrow,   .term-cmd { width: auto; animation: none !important; }
   .term-out { opacity: 1; transform: none; animation: none !important; }
   .term-caret { animation: none; }
   .gh-grid:not([data-run]) .gh-cell { opacity: 1; transform: none; }
@@ -558,3 +556,8 @@ html[data-lang="fr"] [data-lng="en"], html:not([data-lang="fr"]) [data-lng="fr"]
   .project-row, .chip { transition: none; }
 }
 
+
+.cert-row { transition: border-color 0.3s; }
+.cert-row:hover .cert-issuer-line { transform: scaleX(1); }
+.cert-issuer-line { transform: scaleX(0.35); transform-origin: left; transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
+@media (prefers-reduced-motion: reduce) { .cert-issuer-line { transition: none; } }

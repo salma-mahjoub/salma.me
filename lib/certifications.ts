@@ -5,11 +5,34 @@ export type Certification = {
   date: string;
   /** Badge image under /public/certs */
   image: string;
-  /** Verification link. The Verify button only shows once this is set. */
+  /** Public badge link (Credly). Preferred over the PDF when set. */
   verifyUrl?: string;
+  /** Certificate PDF under /public/certs/pdf, opened in a new tab. */
+  certificate?: string;
 };
 
 export const certifications: Certification[] = [
+  {
+    title: "Hedera Certified Developer Associate (HCDA)",
+    issuer: "The Hashgraph Association",
+    date: "Oct 2026",
+    image: "/certs/hedera-hcda.png",
+    certificate: "/certs/pdf/hedera-hcda.pdf",
+  },
+  {
+    title: "Hedera Business Foundation (HBF)",
+    issuer: "The Hashgraph Association",
+    date: "Oct 2026",
+    image: "/certs/hedera-hbf.png",
+    certificate: "/certs/pdf/hedera-hbf.pdf",
+  },
+  {
+    title: "Hedera Certified Foundation (HCF)",
+    issuer: "The Hashgraph Association",
+    date: "Oct 2026",
+    image: "/certs/hedera-hcf.png",
+    certificate: "/certs/pdf/hedera-hcf.pdf",
+  },
   {
     title: "AWS Academy Graduate: Cloud Foundations",
     issuer: "Amazon Web Services (AWS)",
