@@ -72,7 +72,7 @@ export function CommandPalette() {
       { id: "experience", group: "Go to", label: "Experience", labelFr: "Expérience", keywords: "internships work", icon: Briefcase, run: go("experience") },
       { id: "projects", group: "Go to", label: "Projects", labelFr: "Projets", keywords: "work apps", icon: FolderOpen, run: go("projects") },
       { id: "github", group: "Go to", label: "GitHub activity", labelFr: "Activité GitHub", keywords: "contributions commits", icon: GithubLogo, run: go("github") },
-      { id: "certifications", group: "Go to", label: "Certifications", labelFr: "Certifications", keywords: "badges cisco aws", icon: Certificate, run: go("certifications") },
+      { id: "certifications", group: "Go to", label: "Certifications", labelFr: "Certifications", keywords: "badges cisco aws hedera hashgraph", icon: Certificate, run: go("certifications") },
       { id: "beyond", group: "Go to", label: "Beyond the code", labelFr: "Au-delà du code", keywords: "pinterest music kanun", icon: MusicNotes, run: go("beyond") },
       { id: "contact", group: "Go to", label: "Contact", labelFr: "Contact", keywords: "email hello", icon: EnvelopeSimple, run: go("contact") },
       ...projects.map<Command>((p) => ({
