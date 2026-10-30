@@ -13,6 +13,13 @@ export type Certification = {
 
 export const certifications: Certification[] = [
   {
+    title: "Generative AI with Diffusion Models",
+    issuer: "NVIDIA",
+    date: "Oct 2026",
+    image: "/certs/nvidia-diffusion-models.png",
+    certificate: "/certs/pdf/nvidia-diffusion-models.pdf",
+  },
+  {
     title: "Hedera Certified Developer Associate (HCDA)",
     issuer: "The Hashgraph Association",
     date: "Oct 2026",

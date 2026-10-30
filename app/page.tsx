@@ -123,7 +123,7 @@ export default async function Home() {
       <Section
         id="certifications"
         title="Certifications"
-        blurb={<T en="Badges and credentials from Hedera, AWS and Cisco." fr="Badges et certifications de Hedera, d'AWS et de Cisco." />}
+        blurb={<T en="Badges and credentials from NVIDIA, Hedera, AWS and Cisco." fr="Badges et certifications de NVIDIA, Hedera, d'AWS et de Cisco." />}
       >
         <Certificates items={certifications} />
       </Section>
