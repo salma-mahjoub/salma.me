@@ -20,6 +20,13 @@ export const certifications: Certification[] = [
     certificate: "/certs/pdf/nvidia-diffusion-models.pdf",
   },
   {
+    title: "Applications of AI for Predictive Maintenance",
+    issuer: "NVIDIA",
+    date: "Nov 2026",
+    image: "/certs/nvidia-predictive-maintenance.png",
+    certificate: "/certs/pdf/nvidia-predictive-maintenance.pdf",
+  },
+  {
     title: "Hedera Certified Developer Associate (HCDA)",
     issuer: "The Hashgraph Association",
     date: "Oct 2026",
