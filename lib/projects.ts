@@ -24,12 +24,31 @@ export type Project = {
   /** A quiet animated motif shown at the end of the row. */
   motif?: "secure-sync";
   /** Preview that unfolds on hover, tap or keyboard focus. */
-  media?: "browser" | "phone";
+  media?: "samops" | "realmforge" | "styleto";
 };
 
 const gh = (repo: string) => `https://github.com/salma-mahjoub/${repo}`;
 
 export const projects: Project[] = [
+  {
+    id: "realmforge",
+    name: "RealmForge",
+    kind: "Academic project",
+    context: ["Blockchain BK-01", "Team of two"],
+    year: "2026",
+    summary:
+      "A blockchain platformer: build levels in the browser, publish them as NFTs and earn FORGE tokens when others play them. Fees, rewards and staked races run on-chain, and game results are validated by a server and settled through EIP-712 signatures. Deployed on Sepolia.",
+    summaryFr:
+      "Un jeu de plateforme sur blockchain : on crée des niveaux dans le navigateur, on les publie en NFT et on gagne des jetons FORGE quand d'autres les jouent. Frais, récompenses et courses misées passent on-chain, et les résultats sont validés par un serveur puis réglés via des signatures EIP-712. Déployé sur Sepolia.",
+    note: "Built with a teammate: I worked on the FORGE token, the economy and run settlement, race and season logic, server-side signing, and the test and security reports.",
+    noteFr: "Réalisé en binôme : j'ai travaillé sur le token FORGE, l'économie et le règlement des parties, la logique des courses et des saisons, la signature côté serveur, ainsi que les rapports de tests et de sécurité.",
+    tags: ["Solidity", "Hardhat", "OpenZeppelin", "Ethereum (Sepolia)", "React", "Phaser", "TypeScript", "Fastify", "Colyseus", "wagmi", "viem", "IPFS"],
+    links: [
+      { label: "GitHub", href: gh("realmforge"), kind: "repo" },
+      { label: "ForgeCoin on Etherscan", labelFr: "ForgeCoin sur Etherscan", href: "https://sepolia.etherscan.io/address/0x5d40434c1B59F4f2Be0B986373C074571133421e#code", kind: "live" },
+    ],
+    media: "realmforge",
+  },
   {
     id: "orange",
     name: "Orange Smart Batteries",
@@ -58,7 +77,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Better Auth", "Recharts", "Playwright"],
     links: [{ label: "samops.app", href: "https://samops.app", kind: "live" }],
     privateRepo: true,
-    media: "browser",
+    media: "samops",
   },
   {
     id: "walkandwin",
@@ -92,7 +111,7 @@ export const projects: Project[] = [
       { label: "Clothing detection", labelFr: "Détection de vêtements", href: "https://huggingface.co/spaces/Syleto/labasni-detection", kind: "ai" },
       { label: "Virtual try-on", labelFr: "Essayage virtuel", href: "https://huggingface.co/spaces/Syleto/vto", kind: "ai" },
     ],
-    media: "phone",
+    media: "styleto",
   },
   {
     id: "wefarm",

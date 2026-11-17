@@ -4,8 +4,17 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const sets = {
-  browser: { images: ["/projects/samops-desktop.jpg"], alt: "The SamOps website" },
-  phone: {
+  samops: { type: "browser", label: "samops.app", images: ["/projects/samops-desktop.jpg"], alt: "The SamOps website" },
+  realmforge: {
+    type: "browser",
+    label: "realmforge",
+    ratio: "1440 / 900",
+    images: ["/projects/realmforge-home.jpg", "/projects/realmforge-editor.jpg", "/projects/realmforge-play.jpg", "/projects/realmforge-race.jpg"],
+    alt: "RealmForge: home, level editor, gameplay and versus race",
+  },
+  styleto: {
+    type: "phone",
+    label: "",
     images: ["/projects/styleto-1.png", "/projects/styleto-2.png", "/projects/styleto-3.png", "/projects/styleto-4.png"],
     alt: "Styleto app screens",
   },
@@ -22,8 +31,11 @@ function useCycle(length: number, running: boolean) {
   return i;
 }
 
-export function ProjectMedia({ type, open }: { type: "browser" | "phone"; open: boolean }) {
-  const { images, alt } = sets[type];
+export type MediaKey = keyof typeof sets;
+
+export function ProjectMedia({ media, open }: { media: MediaKey; open: boolean }) {
+  const { type, label, images, alt } = sets[media];
+  const ratio = "ratio" in sets[media] ? (sets[media].ratio as string) : undefined;
   const i = useCycle(images.length, open);
 
   const dots = images.length < 2 ? null : (
@@ -66,11 +78,11 @@ export function ProjectMedia({ type, open }: { type: "browser" | "phone"; open: 
           <span />
           <span />
           <span />
-          <em>samops.app</em>
+          <em>{label}</em>
         </div>
-        <div className="pm-shots">
+        <div className="pm-shots" style={ratio ? { aspectRatio: ratio } : undefined}>
           {images.map((src, k) => (
-            <Image key={src} src={src} alt={k === 0 ? alt : ""} width={800} height={600} unoptimized draggable={false} className="pm-shot pm-shot-still" data-on={k === i || undefined} />
+            <Image key={src} src={src} alt={k === 0 ? alt : ""} width={800} height={600} unoptimized draggable={false} className={`pm-shot ${ratio ? "" : "pm-shot-still"}`} data-on={k === i || undefined} />
           ))}
         </div>
       </div>

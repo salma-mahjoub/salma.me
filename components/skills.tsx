@@ -3,6 +3,13 @@
 import {
   Brain,
   Buildings,
+  CubeFocus,
+  CurrencyEth,
+  FileCode,
+  GameController,
+  Hammer,
+  Wallet,
+  Code,
   ChatText,
   Database,
   Eye,
@@ -23,6 +30,7 @@ type Skill = { name: string; group: string; svg?: string; icon?: Icon };
 const categories = [
   { id: "mobile", name: "Mobile", fr: "Mobile" },
   { id: "web", name: "Web & Backend", fr: "Web & Backend" },
+  { id: "blockchain", name: "Blockchain & Web3", fr: "Blockchain & Web3" },
   { id: "ai", name: "AI & Data", fr: "IA & Données" },
   { id: "languages", name: "Languages", fr: "Langages" },
   { id: "databases", name: "Databases", fr: "Bases de données" },
@@ -40,7 +48,18 @@ const skills: Skill[] = [
   { name: "Symfony", group: "web", svg: "symfony" },
   { name: ".NET", group: "web", svg: "dotnetcore" },
   { name: "Next.js", group: "web", svg: "nextjs" },
+  { name: "React", group: "web", svg: "react" },
+  { name: "Fastify", group: "web", icon: Plugs },
+  { name: "Phaser", group: "web", icon: GameController },
   { name: "REST APIs", group: "web", icon: Plugs },
+
+  { name: "Solidity", group: "blockchain", icon: CubeFocus },
+  { name: "Hardhat", group: "blockchain", icon: Hammer },
+  { name: "Ethereum", group: "blockchain", icon: CurrencyEth },
+  { name: "Smart Contracts", group: "blockchain", icon: FileCode },
+  { name: "ERC-20 / ERC-721", group: "blockchain", icon: CurrencyEth },
+  { name: "wagmi & viem", group: "blockchain", icon: Wallet },
+  { name: "Hedera", group: "blockchain", icon: CubeFocus },
 
   { name: "Machine Learning", group: "ai", icon: Brain },
   { name: "NLP", group: "ai", icon: ChatText },
@@ -51,6 +70,8 @@ const skills: Skill[] = [
   { name: "C/C++", group: "languages", svg: "cplusplus" },
   { name: "C#", group: "languages", svg: "csharp" },
   { name: "JavaScript", group: "languages", svg: "javascript" },
+  { name: "TypeScript", group: "languages", icon: Code },
+  { name: "Solidity", group: "languages", icon: CubeFocus },
   { name: "PHP", group: "languages", svg: "php" },
   { name: "Kotlin", group: "languages", svg: "kotlin" },
   { name: "Swift", group: "languages", svg: "swift" },
@@ -82,6 +103,10 @@ const aliases: Record<string, string[]> = {
   "C/C++": ["c", "c++"],
   Kotlin: ["kotlin jetpack compose"],
   Swift: ["swiftui"],
+  Ethereum: ["ethereum (sepolia)"],
+  "wagmi & viem": ["wagmi", "viem"],
+  "Smart Contracts": ["solidity"],
+  "ERC-20 / ERC-721": ["openzeppelin"],
 };
 
 type Project = { name: string; meta: string };

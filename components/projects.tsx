@@ -20,7 +20,7 @@ import type { Project, ProjectLink } from "@/lib/projects";
 import { useL } from "@/lib/use-lang";
 
 const KIND_FR: Record<string, string> = { Internship: "Stage", "Academic project": "Projet académique" };
-const CONTEXT_FR: Record<string, string> = { "Team project": "Projet d'équipe", "First project": "Premier projet" };
+const CONTEXT_FR: Record<string, string> = { "Team of two": "Projet en binôme", "Team project": "Projet d'équipe", "First project": "Premier projet" };
 
 const kindIcon = { Internship: Briefcase, "Academic project": GraduationCap } as const;
 
@@ -134,7 +134,7 @@ function Card({ p, index }: { p: Project; index: number }) {
           <div id={drawer} className="proj-drawer">
             <div className="proj-drawer-in">
               <div className="pb-1 pt-5">
-                <ProjectMedia type={p.media} open={open} />
+                <ProjectMedia media={p.media} open={open} />
               </div>
             </div>
           </div>

@@ -68,7 +68,7 @@ export function CommandPalette() {
   const commands = useMemo<Command[]>(
     () => [
       { id: "top", group: "Go to", label: "Top", labelFr: "Haut de page", keywords: "home hero start", icon: ArrowUp, run: go("top") },
-      { id: "skills", group: "Go to", label: "Skills", labelFr: "Compétences", keywords: "stack technologies tools", icon: Wrench, run: go("skills") },
+      { id: "skills", group: "Go to", label: "Skills", labelFr: "Compétences", keywords: "stack technologies tools solidity blockchain web3", icon: Wrench, run: go("skills") },
       { id: "experience", group: "Go to", label: "Experience", labelFr: "Expérience", keywords: "internships work", icon: Briefcase, run: go("experience") },
       { id: "projects", group: "Go to", label: "Projects", labelFr: "Projets", keywords: "work apps", icon: FolderOpen, run: go("projects") },
       { id: "github", group: "Go to", label: "GitHub activity", labelFr: "Activité GitHub", keywords: "contributions commits", icon: GithubLogo, run: go("github") },

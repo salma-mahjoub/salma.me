@@ -42,6 +42,8 @@ const jsonLd = {
     "Mobile development",
     "Full-stack development",
     "Machine learning",
+    "Blockchain",
+    "Smart contracts (Solidity)",
     "Natural language processing",
     "Computer vision",
     "Flutter",
