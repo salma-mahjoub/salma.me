@@ -20,6 +20,13 @@ export const certifications: Certification[] = [
     certificate: "/certs/pdf/nvidia-diffusion-models.pdf",
   },
   {
+    title: "Fundamentals of Deep Learning",
+    issuer: "NVIDIA",
+    date: "Nov 2026",
+    image: "/certs/nvidia-fundamentals-deep-learning.png",
+    certificate: "/certs/pdf/nvidia-fundamentals-deep-learning.pdf",
+  },
+  {
     title: "Applications of AI for Predictive Maintenance",
     issuer: "NVIDIA",
     date: "Nov 2026",
